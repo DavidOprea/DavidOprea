@@ -154,6 +154,3 @@ jobs:
           config_border_radius: 16  # Rounded corners
           config_border: yes
           config_border_color: "#30363d"  # GitHub dark border color
-          
-          # Padding and spacing
-          config_padding: 20, 10%
