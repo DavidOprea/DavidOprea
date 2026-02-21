@@ -1,44 +1,32 @@
-<h2 align="left">Hi 👋! My name is David Oprea and I'm a CS student at Purdue University!</h2>
+<h2 align="left">Hi 👋! My name is David Oprea and I'm a Computer Science major at Purdue University</h2>
 
 ###
 
 <div align="center">
-  <img src="assets/metrics.svg" height="150" alt="metrics graph" />
-</div>
-
-###
-
-<img align="right" height="150" src="data:image/jpeg;base64,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"  />
-
-###
-
-<div align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="30" alt="java logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="30" alt="python logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="javascript logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="30" alt="react logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="30" alt="html5 logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="30" alt="css3 logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" height="30" alt="c logo"  />
+  <img src="https://david-readme-stats.vercel.app/api?username=DavidOprea&show_icons=true&theme=radical" height="150" alt="David's GitHub stats" />
+  
+  <img src="https://david-readme-stats.vercel.app/api/top-langs/?username=DavidOprea&layout=compact&theme=radical" height="150" alt="David's top languages" />
 </div>
 
 ###
 
 <div align="left">
-  <a href="https://www.instagram.com/davidoprea1/"><img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="instagram logo"  /></a>
-  <a href="https://discordapp.com/users/diamonrald"><img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=7289DA&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="discord logo"  /></a>
-  <a href="mailto:YOUR_EMAIL@gmail.com"><img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="gmail logo"  /></a>
-  <a href="https://www.linkedin.com/in/david-oprea"><img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="linkedin logo" /></a>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" height="30" alt="C logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="30" alt="Python logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="30" alt="Java logo"  />
+</div>
+
+###
+
+<div align="left">
+  <a href="mailto:your.email@gmail.com"><img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="Gmail logo"  /></a>
+  <a href="https://www.linkedin.com/in/YOUR_LINKEDIN"><img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="LinkedIn logo" /></a>
 </div>
 
 ###
 
 <br clear="both">
 
-###
+<img src="https://raw.githubusercontent.com/DavidOprea/DavidOprea/output/snake.svg" alt="Snake animation" />
