@@ -3,8 +3,7 @@
 ###
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=DavidOprea&show_icons=true&theme=radical" height="150" alt="stats graph"  />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DavidOprea&layout=compact&theme=radical" height="150" alt="languages graph"  />
+  <img src="assets/metrics.svg" height="150" alt="metrics graph" />
 </div>
 
 ###
