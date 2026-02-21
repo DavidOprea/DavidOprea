@@ -1,22 +1,159 @@
-name: GitHub Metrics
-
+name: Metrics
 on:
+  schedule: [{cron: "0 0 * * *"}]
   workflow_dispatch:
-  schedule:
-    - cron: "0 6 * * *"
+  push: {branches: ["main", "master"]}
 
 jobs:
-  metrics:
+  github-metrics:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: DavidOprea
+          # Core settings
           filename: assets/metrics.svg
+          token: ${{ secrets.METRICS_TOKEN }}
           base: header, activity, community, repositories, metadata
+          base_indepth: yes
+          output_action: commit
+          
+          # ==============================================
+          # LAYOUT & APPEARANCE - Make it look premium
+          # ==============================================
+          config_display: columns
+          config_columns: 2
+          config_order: |
+            header,
+            isocalendar,
+            languages,
+            notable,
+            achievements,
+            habits,
+            activity,
+            lines
+          config_padding: 20, 10%
+          config_twemoji: yes
+          config_animated: yes
+          config_timezone: America/Indianapolis
+          
+          # ==============================================
+          # COLUMN 1: LEFT SIDE - Identity & Languages
+          # ==============================================
+          
+          # Header with your info (shows username, name, avatar, bio)
+          plugin_header: yes
+          
+          # Language statistics - Detailed breakdown
           plugin_languages: yes
+          plugin_languages_details: bytes-size, percentage, lines
           plugin_languages_sections: most-used
+          plugin_languages_indepth: yes
+          plugin_languages_limit: 8
+          plugin_languages_ignored: html, css, tex, makefile, cmake  # Optional: hide less relevant files
+          plugin_languages_aliases: JavaScript:JS, TypeScript:TS, Python:Python, Java:Java
+          plugin_languages_colors: |
+            JavaScript: "#f1e05a",
+            Python: "#3572A5",
+            Java: "#b07219",
+            TypeScript: "#3178c6"
+          plugin_languages_analysis_timeout: 60
+          plugin_languages_recent_load: 500
+          plugin_languages_recent_days: 365
+          
+          # Programming habits and coding patterns
+          plugin_habits: yes
+          plugin_habits_from: 500
+          plugin_habits_days: 60
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
+          plugin_habits_trim: yes
+          
+          # Follow-up stats (issue/PR resolution)
+          plugin_followup: yes
+          plugin_followup_sections: repositories
+          plugin_followup_indepth: yes
+          
+          # ==============================================
+          # COLUMN 2: RIGHT SIDE - Activity & Achievements
+          # ==============================================
+          
+          # Notable contributions to other repos
+          plugin_notable: yes
+          plugin_notable_repositories: yes
+          plugin_notable_indepth: yes
+          plugin_notable_types: commit, pull_request, issue
+          plugin_notable_filter: "stars:>5"
+          
+          # GitHub achievements
+          plugin_achievements: yes
+          plugin_achievements_display: detailed
+          plugin_achievements_secrets: yes
+          plugin_achievements_threshold: C
+          plugin_achievements_limit: 8
+          
+          # Recent activity feed
+          plugin_activity: yes
+          plugin_activity_limit: 8
+          plugin_activity_days: 30
+          plugin_activity_visibility: all
+          plugin_activity_timestamps: yes
+          plugin_activity_filter: all
+          
+          # Contribution calendar (heatmap)
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          
+          # Lines of code statistics
           plugin_lines: yes
+          plugin_lines_history: yes
+          plugin_lines_delay: 60
+          
+          # ==============================================
+          # OPTIONAL: Extra cool plugins (uncomment if wanted)
+          # ==============================================
+          
+          # # Code snippets from popular repos
+          # plugin_code: yes
+          # plugin_code_load: 400
+          # plugin_code_visibility: public
+          # plugin_code_languages: python, javascript, typescript
+          
+          # # Recent releases you've published
+          # plugin_releases: yes
+          # plugin_releases_limit: 3
+          # plugin_releases_tag: "v*"
+          
+          # # Stars and forks
+          # plugin_stars: yes
+          # plugin_stars_limit: 4
+          
+          # # Contributions to open source projects
+          # plugin_people: yes
+          # plugin_people_types: contributors, stargazers, watchers, followers, sponsors
+          # plugin_people_limit: 24
+          # plugin_people_size: 28
+          
+          # # Projects you're working on
+          # plugin_projects: yes
+          # plugin_projects_limit: 4
+          
+          # ==============================================
+          # FINISHING TOUCHES - Make it beautiful
+          # ==============================================
+          
+          # Color theme - pick one!
+          # Available: dark, light, highcontrast, night, github, github-dark, pastel, classic
+          config_theme: night  # Professional dark theme
+          
+          # Custom emojis for sections
+          colors_emojis: 👨‍💻, 📊, 🚀, 🌟, 📈, 🏆
+          
+          # Border styling
+          config_border_radius: 16  # Rounded corners
+          config_border: yes
+          config_border_color: "#30363d"  # GitHub dark border color
+          
+          # Padding and spacing
+          config_padding: 20, 10%
